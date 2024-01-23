@@ -6,12 +6,13 @@ import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 
 
 //@JsonIgnoreProperties({"field1", "field2"})
+@JsonFilter("SomeBeanFilter")
 public class SomeBean {
     private String field1;
 
-    @JsonIgnore
-    private String field2;
     private String field3;
+    //@JsonIgnore
+    private String field2;
 
     public SomeBean(String field1, String field2, String field3) {
         this.field1 = field1;
